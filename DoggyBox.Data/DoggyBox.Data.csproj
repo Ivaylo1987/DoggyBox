@@ -53,8 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Contracts\IDataProvider.cs" />
+    <Compile Include="Contracts\IGenericRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericEFRepository.cs" />
+    <Compile Include="UnitsOfWork\EFDataProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
