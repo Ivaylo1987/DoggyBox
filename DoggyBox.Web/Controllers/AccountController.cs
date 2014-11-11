@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DoggyBox.Web.Models;
+using DoggyBox.Model;
 
 namespace DoggyBox.Web.Controllers
 {
