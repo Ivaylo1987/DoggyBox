@@ -55,9 +55,10 @@
     <Compile Include="ApplicationUser.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Dog.cs" />
+    <Compile Include="Mark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trainer.cs" />
-    <Compile Include="TrainingPractice.cs" />
+    <Compile Include="Practice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
