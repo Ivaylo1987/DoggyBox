@@ -4,12 +4,15 @@ namespace DoggyBox.Data.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using DoggyBox.Data;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DoggyBox.Data.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
+            this.AutomaticMigrationDataLossAllowed = true;
+            
         }
 
         protected override void Seed(DoggyBox.Data.ApplicationDbContext context)
