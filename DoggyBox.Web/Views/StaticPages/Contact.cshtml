@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <h2>Ping us...</h2>
+
+    <address>
+        Doggy Box address<br />
+        Sofia Bulgaria<br />
+        <abbr title="Phone">P:</abbr>
+        02/42 55 01
+    </address>
+
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        @Html.Partial("ContactMessagePartial")
+    </div>
+
+    <address>
+        <span>..or send us an email:</span>   <a href="mailto:Support@doggybox.com">Support@doggybox.com</a><br />
+    </address>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
