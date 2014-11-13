@@ -13,6 +13,7 @@
 
         public string Phone { get; set; }
 
+        [Display(Name="Message")]
         public string MessageText { get; set; }
     }
 }
