@@ -1,9 +1,16 @@
 ﻿namespace DoggyBox.Web.Areas.Administration.Controllers
 {
-    using System.Web.Mvc;
+    using DoggyBox.Data.Contracts;
+using System.Web.Mvc;
 
     public class UsersController : BaseAdministrationController
     {
+        public UsersController(IDataProvider provider)
+            :base(provider)
+        {
+
+        }
+
         // GET: Administration/Users
         public ActionResult ListAll()
         {

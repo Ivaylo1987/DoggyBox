@@ -1,5 +1,6 @@
 ﻿namespace DoggyBox.Web.Controllers
 {
+    using DoggyBox.Data.Contracts;
     using DoggyBox.Model;
     using DoggyBox.Web.ViewModels.StaticPages;
     using System;
@@ -10,6 +11,11 @@
 
     public class StaticPagesController : BaseController
     {
+        public StaticPagesController(IDataProvider provider)
+            : base(provider)
+        {
+        }
+
         public ActionResult About()
         {
             return View();

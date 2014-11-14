@@ -9,11 +9,6 @@
     {
         private IDataProvider data;
 
-        public BaseAdministrationController()
-            :this(new EFDataProvider())
-        {
-        }
-
         public BaseAdministrationController(IDataProvider data)
         {
             this.data = data;

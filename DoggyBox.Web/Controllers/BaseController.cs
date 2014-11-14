@@ -10,12 +10,6 @@
 
     public class BaseController : Controller
     {
-
-        public BaseController()
-            : this(new EFDataProvider())
-        {
-        }
-
         public BaseController(IDataProvider data)
         {
             this.Data = data;

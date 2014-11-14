@@ -15,11 +15,6 @@
         private ApplicationDbContext context;
         private IDictionary<Type, object> repositories;
 
-        public EFDataProvider()
-            : this(new ApplicationDbContext())
-        {
-        }
-
         public EFDataProvider(ApplicationDbContext context)
         {
             this.context = context;
