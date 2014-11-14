@@ -1,14 +1,13 @@
 ﻿@using DoggyBox.Web.ViewModels.StaticPages
 @model ContactMessageViewModel
 
-
 @using (Html.BeginForm("Contact", "StaticPages", FormMethod.Post, new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
 
     <legend>Quick message</legend>
     <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "col-lg-1 control-label" })
+        @Html.LabelFor(m => m.Name, new { @class = "col-lg-2 control-label" })
         <div class="col-lg-10">
             @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
             @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
@@ -16,7 +15,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-lg-1 control-label" })
+        @Html.LabelFor(m => m.Email, new { @class = "col-lg-2 control-label" })
         <div class="col-lg-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
@@ -24,10 +23,10 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.MessageText, new { @class = "col-lg-1 control-label" })
+        @Html.LabelFor(m => m.Content, new { @class = "col-lg-2 control-label" })
         <div class="col-lg-10">
-            @Html.TextAreaFor(m => m.MessageText, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.MessageText, "", new { @class = "text-danger" })
+            @Html.TextAreaFor(m => m.Content, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Content, "", new { @class = "text-danger" })
         </div>
     </div>
 

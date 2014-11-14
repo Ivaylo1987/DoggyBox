@@ -16,5 +16,8 @@
 
         IGenericRepository<Mark> Marks { get; }
 
+        IGenericRepository<Message> Messages { get; }
+
+        int SaveChanges();
     }
 }

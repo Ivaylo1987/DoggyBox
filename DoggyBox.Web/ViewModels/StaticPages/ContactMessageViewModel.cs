@@ -14,6 +14,6 @@
         public string Phone { get; set; }
 
         [Display(Name="Message")]
-        public string MessageText { get; set; }
+        public string Content { get; set; }
     }
 }

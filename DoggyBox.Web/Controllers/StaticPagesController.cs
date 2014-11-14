@@ -1,5 +1,6 @@
 ﻿namespace DoggyBox.Web.Controllers
 {
+    using DoggyBox.Model;
     using DoggyBox.Web.ViewModels.StaticPages;
     using System;
     using System.Collections.Generic;
@@ -21,11 +22,30 @@
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Contact(ContactMessageViewModel message)
+        public ActionResult Contact(ContactMessageViewModel sentMessage)
         {
-            var isModelStateValid = ModelState.IsValid;
-            
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var isAjax = this.Request.IsAjaxRequest();
+
+            var dbMessage = new Message
+            {
+                Content = sentMessage.Content,
+                From = sentMessage.Email,
+                SenderName = sentMessage.Name,
+                To = "support@doggybox.com",
+                Date = DateTime.Now
+            };
+
+            this.Data.Messages.Add(dbMessage);
+            this.Data.SaveChanges();
+
+            this.TempData["successMessage"] = "Your message was successfully sent!";
+
+            return RedirectToAction("Contact");
         }
     }
 }

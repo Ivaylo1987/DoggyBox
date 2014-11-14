@@ -74,6 +74,14 @@
             }
         }
 
+        public IGenericRepository<Message> Messages
+        {
+            get
+            {
+                return this.GetRepository<Message>();
+            }
+        }
+
         public int SaveChanges()
         {
             return this.context.SaveChanges();
