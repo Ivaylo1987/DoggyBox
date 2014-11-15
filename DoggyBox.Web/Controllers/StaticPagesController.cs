@@ -53,5 +53,10 @@
 
             return RedirectToAction("Contact");
         }
+
+        public ActionResult Courses()
+        {
+            return View();
+        }
     }
 }

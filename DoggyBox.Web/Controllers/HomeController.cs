@@ -12,7 +12,6 @@ namespace DoggyBox.Web.Controllers
         public HomeController(IDataProvider provider)
             :base(provider)
         {
-
         }
 
         public ActionResult Index()

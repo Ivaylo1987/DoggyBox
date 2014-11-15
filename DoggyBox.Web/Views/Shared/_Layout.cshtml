@@ -21,9 +21,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("About", "About", "StaticPages", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "StaticPages", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Courses", "Courses", "StaticPages", new { area = "" }, null)</li>
                     @if (this.User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Administration", "Index", "Home", new { area = "Administration" }, null)</li>
