@@ -15,8 +15,9 @@
 
         public string Phone { get; set; }
 
-        [Display(Name="Message")]
+        [Required]
         [AllowHtml]
+        [Display(Name="Message")]
         public string Content { get; set; }
     }
 }

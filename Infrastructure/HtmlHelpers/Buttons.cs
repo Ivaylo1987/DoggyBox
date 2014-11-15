@@ -4,36 +4,38 @@
     using System.Web.Mvc;
     using System.Web.Mvc.Html;
 
+    // Action Names hardcoded
+    // TODO: Fix hardcoded Action names
     public static class Buttons
     {
-        public static MvcHtmlString CreateButton(this HtmlHelper htmlHelper, string text = null)
+        public static MvcHtmlString CreateButton(this HtmlHelper htmlHelper, string action, string text = null)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "Create New";
             }
 
-            return PrimaryButton(htmlHelper, text, "Create");
+            return PrimaryButton(htmlHelper, text, action);
         }
 
-        public static MvcHtmlString EditButton(this HtmlHelper htmlHelper, int id, string text = null)
+        public static MvcHtmlString EditButton(this HtmlHelper htmlHelper, int id, string action, string text = null)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "Edit";
             }
 
-            return PrimaryButton(htmlHelper, text, "Edit", new { id = id });
+            return PrimaryButton(htmlHelper, text, action, new { id = id });
         }
 
-        public static MvcHtmlString DeleteButton(this HtmlHelper htmlHelper, int id, string text = null)
+        public static MvcHtmlString DeleteButton(this HtmlHelper htmlHelper, int id, string action, string text = null)
         {
             if (string.IsNullOrEmpty(text))
             {
                 text = "Delete";
             }
 
-            return DangerButton(htmlHelper, text, "Delete", new { id = id });
+            return DangerButton(htmlHelper, text, action, new { id = id });
         }
 
         public static MvcHtmlString PrimaryButton(
@@ -91,7 +93,7 @@
         public static MvcHtmlString SubmitButton(this HtmlHelper helper, string value, object htmlAttributes = null)
         {
             var submitButton = new TagBuilder("input");
-            submitButton.AddCssClass("btn btn-primary");
+            submitButton.AddCssClass("btn btn-default");
             submitButton.Attributes.Add("type", "submit");
             submitButton.Attributes.Add("value", value);
             submitButton.ApplyAttributes(htmlAttributes);

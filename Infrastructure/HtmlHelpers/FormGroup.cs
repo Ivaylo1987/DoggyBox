@@ -25,6 +25,16 @@
             return new MvcHtmlString(generatedGroup.ToString());
         }
 
+        public static MvcHtmlString FormGroupTextAreaFor<TModel, TValue>(
+            this HtmlHelper<TModel> htmlHelper,
+            Expression<Func<TModel, TValue>> expression)
+        {
+            var input = htmlHelper.TextAreaFor(expression, htmlAttributes : new { @class = InputClass } );
+            var generatedGroup = GenerateGroup(htmlHelper, expression, input);
+
+            return new MvcHtmlString(generatedGroup.ToString());
+        }
+
         public static MvcHtmlString PassowrdFormGroupFor<TModel, TValue>(
             this HtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TValue>> expression)
