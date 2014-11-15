@@ -16,6 +16,8 @@
 
         public string Description { get; set; }
 
+        public CourseStatus Status { get; set; }
+
         public virtual ICollection<Practice> Practices { get; set; }
 
         public virtual ICollection<Mark> Marks { get; set; }

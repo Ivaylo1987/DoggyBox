@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Model", "DoggyBox.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Data", "DoggyBox.Data\DoggyBox.Data.csproj", "{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DF0C53E5-7FF0-4065-AC14-8A746BC79382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +47,6 @@ Global
 		{E6CC52DA-E148-4EA1-A64E-7EBEC623D721} = {D6912129-3050-48F9-85FB-60A544636AF5}
 		{42271A5C-A0A4-4BA7-80D3-98938C408C15} = {94D53FD5-F417-4233-BFB0-E8DDE102CE32}
 		{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784} = {94D53FD5-F417-4233-BFB0-E8DDE102CE32}
+		{DF0C53E5-7FF0-4065-AC14-8A746BC79382} = {F44EB2B7-90C6-48DC-954E-D65439FB797D}
 	EndGlobalSection
 EndGlobal
