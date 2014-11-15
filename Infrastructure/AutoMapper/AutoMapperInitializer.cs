@@ -6,11 +6,11 @@ namespace DoggyBox.Infrastructure.AutoMapper
     using System.Linq;
     using System.Reflection;
 
-    public class AutoMapperConfig
+    public class AutoMapperInitializer
     {
         private Assembly assembly;
 
-        public AutoMapperConfig(Assembly assembly)
+        public AutoMapperInitializer(Assembly assembly)
         {
             this.assembly = assembly;
         }
@@ -41,6 +41,7 @@ namespace DoggyBox.Infrastructure.AutoMapper
             foreach (var map in maps)
             {
                 Mapper.CreateMap(map.Source, map.Destination);
+                Mapper.CreateMap(map.Destination, map.Source);
             }
         }
 

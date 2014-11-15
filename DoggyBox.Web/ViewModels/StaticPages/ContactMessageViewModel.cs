@@ -2,19 +2,24 @@
 {
     using System.ComponentModel.DataAnnotations;
     using System.Web.Mvc;
+    using DoggyBox.Infrastructure.AutoMapper;
+    using DoggyBox.Model;
 
-    public class ContactMessageViewModel
+    public class ContactMessageViewModel : IMapFrom<Message>
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Email")]
+        public string SenderEmail { get; set; }
 
         [Required]
         [AllowHtml]
-        public string Name { get; set; }
+        [Display(Name = "Name")]
+        public string SenderName { get; set; }
 
         [DataType(DataType.PhoneNumber)]
-        public string Phone { get; set; }
+        [Display(Name = "Phone")]
+        public string SenderPhone { get; set; }
 
         [Required]
         [AllowHtml]

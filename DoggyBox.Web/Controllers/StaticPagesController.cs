@@ -1,5 +1,6 @@
 ﻿namespace DoggyBox.Web.Controllers
 {
+    using AutoMapper;
     using DoggyBox.Data.Contracts;
     using DoggyBox.Model;
     using DoggyBox.Web.ViewModels.StaticPages;
@@ -37,14 +38,10 @@
 
             var isAjax = this.Request.IsAjaxRequest();
 
-            var dbMessage = new Message
-            {
-                Content = sentMessage.Content,
-                From = sentMessage.Email,
-                SenderName = sentMessage.Name,
-                To = "support@doggybox.com",
-                Date = DateTime.Now
-            };
+            var dbMessage = Mapper.Map<Message>(sentMessage);
+
+            dbMessage.ReceiverEmail = "support@doggybox.com";
+            dbMessage.Date = DateTime.Now;
 
             this.Data.Messages.Add(dbMessage);
             this.Data.SaveChanges();

@@ -74,7 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="AutoMapper\AutoMapperInitializer.cs" />
     <Compile Include="AutoMapper\IHaveCustomMappings.cs" />
     <Compile Include="AutoMapper\IMapFrom.cs" />
     <Compile Include="HtmlHelpers\Buttons.cs" />

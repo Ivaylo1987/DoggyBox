@@ -12,9 +12,12 @@
 
         [Required]
         [EmailAddress]
-        public string From { get; set; }
+        public string SenderEmail { get; set; }
 
-        public string To { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public string SenderPhone { get; set; }
+
+        public string ReceiverEmail { get; set; }
 
         public DateTime Date { get; set; }
 

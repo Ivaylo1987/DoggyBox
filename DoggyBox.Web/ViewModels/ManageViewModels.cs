@@ -62,7 +62,7 @@ namespace DoggyBox.Web.Models
     {
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "SenderPhone Number")]
         public string Number { get; set; }
     }
 
@@ -74,7 +74,7 @@ namespace DoggyBox.Web.Models
 
         [Required]
         [Phone]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "SenderPhone Number")]
         public string PhoneNumber { get; set; }
     }
 

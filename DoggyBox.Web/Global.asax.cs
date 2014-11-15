@@ -1,4 +1,5 @@
 ﻿using DoggyBox.Infrastructure.AutoMapper;
+using DoggyBox.Web.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,8 @@ namespace DoggyBox.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var autoMapper = new AutoMapperConfig(Assembly.GetExecutingAssembly());
-            autoMapper.Execute();
+            ViewEnginesConfig.RegisterRoutes(ViewEngines.Engines);
+            AutoMapperConfig.RegisterMappings(new AutoMapperInitializer(Assembly.GetExecutingAssembly()));
         }
     }
 }
