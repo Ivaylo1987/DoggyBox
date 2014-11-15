@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -273,6 +279,8 @@
     <Folder Include="Areas\Administration\Views\Courses\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Courses\" />
+    <Folder Include="Views\Shared\DisplayTemplates\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -289,9 +297,9 @@
       <Project>{42271a5c-a0a4-4ba7-80d3-98938c408c15}</Project>
       <Name>DoggyBox.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+    <ProjectReference Include="..\Infrastructure\DoggyBox.Infrastructure.csproj">
       <Project>{df0c53e5-7ff0-4065-ac14-8a746bc79382}</Project>
-      <Name>Infrastructure</Name>
+      <Name>DoggyBox.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -322,6 +330,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

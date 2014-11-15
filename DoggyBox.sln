@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Model", "DoggyBox.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Data", "DoggyBox.Data\DoggyBox.Data.csproj", "{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DF0C53E5-7FF0-4065-AC14-8A746BC79382}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Infrastructure", "Infrastructure\DoggyBox.Infrastructure.csproj", "{DF0C53E5-7FF0-4065-AC14-8A746BC79382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

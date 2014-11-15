@@ -4,8 +4,6 @@
     using System.Web.Mvc;
     using System.Web.Mvc.Html;
 
-    // Action Names hardcoded
-    // TODO: Fix hardcoded Action names
     public static class Buttons
     {
         public static MvcHtmlString CreateButton(this HtmlHelper htmlHelper, string action, string text = null)
