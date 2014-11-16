@@ -1,8 +1,9 @@
 ﻿namespace DoggyBox.Model
 {
+    using Application.Models.Base;
     using System.ComponentModel.DataAnnotations;
 
-    public class Trainer
+    public class Trainer : AuditInfo
     {
 
         public int Id { get; set; }

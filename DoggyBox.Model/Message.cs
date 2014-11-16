@@ -1,9 +1,10 @@
 ﻿namespace DoggyBox.Model
 {
+    using Application.Models.Base;
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class Message
+    public class Message : AuditInfo
     {
         public int Id { get; set; }
 

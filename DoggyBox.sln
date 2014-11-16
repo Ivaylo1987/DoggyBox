@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Data", "DoggyBox.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Infrastructure", "Infrastructure\DoggyBox.Infrastructure.csproj", "{DF0C53E5-7FF0-4065-AC14-8A746BC79382}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E30DE31F-D326-4FA6-B144-FE54A93F63A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoggyBox.Common", "DoggyBox.Common\DoggyBox.Common.csproj", "{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF0C53E5-7FF0-4065-AC14-8A746BC79382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +56,6 @@ Global
 		{42271A5C-A0A4-4BA7-80D3-98938C408C15} = {94D53FD5-F417-4233-BFB0-E8DDE102CE32}
 		{0DE4EAA9-BFD3-4BFC-9988-CC34095CB784} = {94D53FD5-F417-4233-BFB0-E8DDE102CE32}
 		{DF0C53E5-7FF0-4065-AC14-8A746BC79382} = {F44EB2B7-90C6-48DC-954E-D65439FB797D}
+		{0D551DCF-2FB6-4C9B-B38E-8A678DBFFEE2} = {E30DE31F-D326-4FA6-B144-FE54A93F63A2}
 	EndGlobalSection
 EndGlobal

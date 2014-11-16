@@ -6,6 +6,9 @@
     <title>Doggy Box</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("styles", required: false)
+    @Styles.Render("~/Content/custom")
 
 </head>
 <body>
@@ -59,7 +62,6 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

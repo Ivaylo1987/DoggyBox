@@ -8,9 +8,25 @@ namespace DoggyBox.Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery.unobtrusive*"));
+            bundles.IgnoreList.Clear();
+
+            RegisterStylesBungles(bundles);
+            RegisterScriptBungles(bundles);
+
+            // Set EnableOptimizations to false for debugging. For more information,
+            // visit http://go.microsoft.com/fwlink/?LinkId=301862
+            BundleTable.EnableOptimizations = false;
+        }
+
+        private static void RegisterScriptBungles(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle("~/bundles/Kendo").Include(
+                        "~/Scripts/Kendo/kendo.all.min.js",
+                        "~/Scripts/Kendo/kendo.aspnetmvc.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery")
+                        .Include("~/Scripts/Kendo/jquery.min.js"));
+            //.Include("~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -23,14 +39,20 @@ namespace DoggyBox.Web
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
+        }
 
+        private static void RegisterStylesBungles(BundleCollection bundles)
+        {
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.readable.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.readable.css"));
 
-            // Set EnableOptimizations to false for debugging. For more information,
-            // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = false;
+            bundles.Add(new StyleBundle("~/Content/kendo").Include(
+                        "~/Content/Kendo/kendo.common.min.css",
+                        "~/Content/Kendo/kendo.common-bootstrap.min.css",
+                        "~/Content/Kendo/kendo.moonlight.min"));
+
+            bundles.Add(new StyleBundle("~/Content/custom").Include(
+                        "~/Content/site.css"));
         }
     }
 }

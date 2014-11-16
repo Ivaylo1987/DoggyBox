@@ -1,8 +1,9 @@
 ﻿namespace DoggyBox.Model
 {
+    using Application.Models.Base;
     using System.Collections.Generic;
 
-    public class Course
+    public class Course : AuditInfo
     {
         public Course()
         {

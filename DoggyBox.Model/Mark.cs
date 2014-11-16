@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Application.Models.Base;
+using System.ComponentModel.DataAnnotations;
 namespace DoggyBox.Model
 {
-    public class Mark
+    public class Mark : AuditInfo
     {
         public int Id { get; set; }
 

@@ -1,9 +1,10 @@
 ﻿namespace DoggyBox.Model
 {
+    using Application.Models.Base;
     using System;
     using System.Collections.Generic;
 
-    public class Dog
+    public class Dog : AuditInfo
     {
         public Dog()
         {
