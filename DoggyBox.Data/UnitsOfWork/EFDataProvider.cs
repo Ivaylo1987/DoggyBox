@@ -1,6 +1,7 @@
 ﻿namespace DoggyBox.Data.UnitsOfWork
 {
 
+    using Application.Models.Base;
     using DoggyBox.Data.Contracts;
     using DoggyBox.Data.Repositories;
     using DoggyBox.Model;
@@ -82,7 +83,7 @@
             return this.context.SaveChanges();
         }
 
-        private IGenericRepository<T> GetRepository<T>() where T : class
+        private IGenericRepository<T> GetRepository<T>() where T : class, IAuditInfo
         {
             var typeOfModel = typeof(T);
 

@@ -5,7 +5,6 @@
 
     public class Trainer : AuditInfo
     {
-
         public int Id { get; set; }
 
         [Required]

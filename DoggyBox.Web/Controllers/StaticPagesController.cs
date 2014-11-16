@@ -36,12 +36,9 @@
                 return View();
             }
 
-            var isAjax = this.Request.IsAjaxRequest();
-
             var dbMessage = Mapper.Map<Message>(sentMessage);
 
             dbMessage.ReceiverEmail = "support@doggybox.com";
-            dbMessage.Date = DateTime.Now;
 
             this.Data.Messages.Add(dbMessage);
             this.Data.SaveChanges();

@@ -37,23 +37,24 @@
 
                 var user = new ApplicationUser
                 {
-                    UserName = "admin@abv.bg",
-                    Email = "admin@abv.bg"
+                    UserName = "admin@admin.bg",
+                    Email = "admin@admin.bg",
+                    CreatedOn = DateTime.Now
                 };
 
                 manager.Create(user, "123456");
                 manager.AddToRole(user.Id, GlobalConstants.AdminRole);
             }
 
-            if (!databaseContext.Users.Any(u => u.UserName == "user@abv.bg"))
+            if (!databaseContext.Users.Any(u => u.UserName == "user@user.bg"))
             {
                 var store = new UserStore<ApplicationUser>(databaseContext);
                 var manager = new UserManager<ApplicationUser>(store);
 
                 var user = new ApplicationUser
                 {
-                    UserName = "user@abv.bg",
-                    Email = "user@abv.bg",
+                    UserName = "user@user.bg",
+                    Email = "user@user.bg",
                     CreatedOn = DateTime.Now,
                 };
 

@@ -20,8 +20,6 @@
 
         public string ReceiverEmail { get; set; }
 
-        public DateTime Date { get; set; }
-
         [Required]
         public string Content { get; set; }
     }

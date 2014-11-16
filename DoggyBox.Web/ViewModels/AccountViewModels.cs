@@ -6,7 +6,7 @@ namespace DoggyBox.Web.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "SenderEmail")]
+        [Display(Name = "Email")]
         public string Email { get; set; }
     }
 

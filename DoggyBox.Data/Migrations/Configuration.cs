@@ -5,6 +5,7 @@ namespace DoggyBox.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using DoggyBox.Data;
+    using DoggyBox.Data.Migrations.Seeders;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
@@ -17,18 +18,7 @@ namespace DoggyBox.Data.Migrations
 
         protected override void Seed(DoggyBox.Data.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            IdentitySeeder.Seed(context);
         }
     }
 }
