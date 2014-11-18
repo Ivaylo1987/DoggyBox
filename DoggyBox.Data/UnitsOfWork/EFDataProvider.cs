@@ -38,6 +38,14 @@
             }
         }
 
+        public IGenericRepository<Image> Images
+        {
+            get
+            {
+                return this.GetRepository<Image>();
+            }
+        }
+
         public IGenericRepository<Course> Courses
         {
             get

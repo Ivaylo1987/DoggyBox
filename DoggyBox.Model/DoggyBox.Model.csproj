@@ -59,6 +59,7 @@
     <Compile Include="CourseInfo.cs" />
     <Compile Include="CourseStatus.cs" />
     <Compile Include="Dog.cs" />
+    <Compile Include="Image.cs" />
     <Compile Include="Mark.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -36,6 +36,16 @@
 
         public DateTime? DeletedOn { get; set; }
 
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string ContactPhone { get; set; }
+
+        public int? ImageId { get; set; }
+
+        public virtual Image Image { get; set; }
+
         public virtual ICollection<Dog> Dogs { get; set; }
 
     }

@@ -20,6 +20,8 @@
 
         IGenericRepository<CourseInfo> CoursesInfo { get; }
 
+        IGenericRepository<Image> Images { get; }
+
         int SaveChanges();
     }
 }

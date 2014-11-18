@@ -24,5 +24,6 @@
         public IDbSet<Practice> Practices { get; set; }
         public IDbSet<Mark> Marks { get; set; }
         public IDbSet<Message> Messages { get; set; }
+        public IDbSet<Image> Images { get; set; }
     }
 }
