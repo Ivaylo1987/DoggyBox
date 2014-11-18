@@ -1,13 +1,15 @@
 ﻿@using DoggyBox.Web.ViewModels.Courses
 @model IEnumerable<CourseViewModel>
 
+<h2>Upcoming Training Practices</h2>
+
 @foreach (var course in Model)
 {
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <img src="~/Content/Images/calendar.gif" /> @course.Info.Name
+                    <img src="~/Content/Images/calendar.gif" /> @course.Info.Name Practices
                 </div>
 
                 <div class="panel-body">
@@ -15,16 +17,17 @@
                     @foreach (var practice in course.Practices)
                     {
                         <div class="row">
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
 
                                         <div class="row">
-                                            <div class="col-md-5">
-                                                Date:
+                                            <div class="col-md-10">
+                                                Start Time:
                                                 @practice.Date
                                             </div>
                                         </div>
+                                        <hr />
                                         @foreach (var dog in practice.Dogs)
                                         {
                                             <div class="row">
@@ -39,6 +42,12 @@
                                                 </div>
                                             </div>
                                         }
+
+                                        @if(User.Identity.IsAuthenticated)
+                                        {
+                                            @Html.ActionLink("Join", "About", "Practices", new { area = "" }, new { @class = "btn btn-success btn-sm pull-right" })
+                                        }      
+                                        
                                     </div>
                                 </div>
                             </div>

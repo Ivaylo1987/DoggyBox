@@ -3,6 +3,7 @@
     using Application.Models.Base;
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Practice : AuditInfo
     {
@@ -15,6 +16,7 @@
 
         public int Id { get; set; }
 
+        [Column(TypeName = "DateTime2")]
         public DateTime Date { get; set; }
 
         public virtual ICollection<Trainer> Trainers { get; set; }

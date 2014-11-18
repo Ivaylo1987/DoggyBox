@@ -37,6 +37,7 @@
         public DateTime? DeletedOn { get; set; }
 
         public virtual ICollection<Dog> Dogs { get; set; }
+
     }
 }
 

@@ -64,20 +64,20 @@
                     new Practice()
                     {
                         Date = new DateTime(2014, 12, 10),
-                        Trainers = new Trainer[] {trainers[0]},
+                        Trainers = new List<Trainer> {trainers[0]},
                         Dogs = new Dog[] {dogs[0], dogs[1], dogs[2]},
                     },
                     new Practice()
                     {
                         Date = new DateTime(2014, 12, 1),
-                        Trainers = new Trainer[] {trainers[1]},
+                        Trainers = new List<Trainer> {trainers[1]},
                         Dogs = new Dog[] {dogs[1], dogs[4], dogs[3]},
                     },
 
                     new Practice()
                     {
                         Date = new DateTime(2014, 12, 7),
-                        Trainers = new Trainer[] {trainers[1]},
+                        Trainers = new List<Trainer> {trainers[1]},
                         Dogs = new Dog[] {dogs[0]},
                     }
                 };
