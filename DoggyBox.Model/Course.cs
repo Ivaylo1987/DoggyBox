@@ -13,11 +13,9 @@
 
         public int Id { get; set; }
 
-        public string Name { get; set; }
-
-        public string Description { get; set; }
-
         public CourseStatus Status { get; set; }
+
+        public CourseInfo Info { get; set; }
 
         public virtual ICollection<Practice> Practices { get; set; }
 

@@ -46,6 +46,14 @@
             }
         }
 
+        public IGenericRepository<CourseInfo> CoursesInfo
+        {
+            get
+            {
+                return this.GetRepository<CourseInfo>();
+            }
+        }
+
         public IGenericRepository<ApplicationUser> ApplicationUsers
         {
             get

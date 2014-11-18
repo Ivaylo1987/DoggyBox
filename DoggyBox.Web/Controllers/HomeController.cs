@@ -14,6 +14,7 @@ namespace DoggyBox.Web.Controllers
         {
         }
 
+        [OutputCache(Duration= 20)]
         public ActionResult Index()
         {
             return View();

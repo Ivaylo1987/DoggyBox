@@ -18,6 +18,8 @@
 
         IGenericRepository<Message> Messages { get; }
 
+        IGenericRepository<CourseInfo> CoursesInfo { get; }
+
         int SaveChanges();
     }
 }

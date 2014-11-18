@@ -1,0 +1,52 @@
+﻿@using DoggyBox.Web.ViewModels.Courses
+@model IEnumerable<CourseViewModel>
+
+@foreach (var course in Model)
+{
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <img src="~/Content/Images/calendar.gif" /> @course.Info.Name
+                </div>
+
+                <div class="panel-body">
+
+                    @foreach (var practice in course.Practices)
+                    {
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                Date:
+                                                @practice.Date
+                                            </div>
+                                        </div>
+                                        @foreach (var dog in practice.Dogs)
+                                        {
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <img src="~/Content/Images/faq_gr_li_green.gif" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                   @dog.Name
+                                                </div>
+                                                <div class="col-md-4">
+                                                    @dog.Breed
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

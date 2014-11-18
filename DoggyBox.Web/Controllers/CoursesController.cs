@@ -1,12 +1,12 @@
-﻿using DoggyBox.Data.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace DoggyBox.Web.Controllers
+﻿namespace DoggyBox.Web.Controllers
 {
+    using AutoMapper.QueryableExtensions;
+    using DoggyBox.Data.Contracts;
+    using DoggyBox.Model;
+    using DoggyBox.Web.ViewModels.Courses;
+    using System.Linq;
+    using System.Web.Mvc;
+
     public class CoursesController : BaseController
     {
         public CoursesController(IDataProvider provider)
@@ -15,9 +15,13 @@ namespace DoggyBox.Web.Controllers
         }
 
         // GET: Courses
-        public ActionResult ListAll()
+        public ActionResult ListAllActive()
         {
-            return View();
+            var onpoingCourses = this.Data.Courses.All()
+                             .Where(c => c.Status == CourseStatus.Ongoing)
+                             .Project().To<CourseViewModel>();
+
+            return View(onpoingCourses);
         }
     }
 }

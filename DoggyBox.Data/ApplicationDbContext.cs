@@ -20,6 +20,7 @@
         public IDbSet<Dog> Dogs { get; set; }
         public IDbSet<Trainer> Trainers { get; set; }
         public IDbSet<Course> Courses { get; set; }
+        public IDbSet<CourseInfo> CoursesInfo { get; set; }
         public IDbSet<Practice> Practices { get; set; }
         public IDbSet<Mark> Marks { get; set; }
         public IDbSet<Message> Messages { get; set; }

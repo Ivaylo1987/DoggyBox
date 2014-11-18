@@ -56,6 +56,7 @@
     <Compile Include="Base\AuditInfo.cs" />
     <Compile Include="Base\IAuditInfo.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="CourseInfo.cs" />
     <Compile Include="CourseStatus.cs" />
     <Compile Include="Dog.cs" />
     <Compile Include="Mark.cs" />

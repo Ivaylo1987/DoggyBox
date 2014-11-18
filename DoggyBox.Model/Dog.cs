@@ -19,6 +19,8 @@
 
         public DateTime DateOfBirth { get; set; }
 
+        public string Breed { get; set; }
+
         public virtual ICollection<Course> Courses { get; set; }
 
         public virtual ICollection<Mark> Marks { get; set; }
