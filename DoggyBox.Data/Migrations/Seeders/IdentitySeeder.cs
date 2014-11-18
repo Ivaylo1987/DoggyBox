@@ -48,6 +48,8 @@
 
             if (!databaseContext.Users.Any(u => u.UserName == "user@user.bg"))
             {
+                var dog = new Dog() {Name= "Lucky", Breed = "Beagle", DateOfBirth = new DateTime(2014, 1, 2)};
+
                 var store = new UserStore<ApplicationUser>(databaseContext);
                 var manager = new UserManager<ApplicationUser>(store);
 
@@ -56,6 +58,7 @@
                     UserName = "user@user.bg",
                     Email = "user@user.bg",
                     CreatedOn = DateTime.Now,
+                    Dogs = new Dog[] {dog}
                 };
 
                 manager.Create(user, "123456");

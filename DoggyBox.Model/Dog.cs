@@ -21,11 +21,12 @@
 
         public string Breed { get; set; }
 
+        public virtual ApplicationUser Owner { get; set; }
+
         public virtual ICollection<Course> Courses { get; set; }
 
         public virtual ICollection<Mark> Marks { get; set; }
 
         public virtual ICollection<Practice> Practices { get; set; }
-
     }
 }

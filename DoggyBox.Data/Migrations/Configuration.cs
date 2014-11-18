@@ -19,6 +19,7 @@ namespace DoggyBox.Data.Migrations
         protected override void Seed(DoggyBox.Data.ApplicationDbContext context)
         {
             IdentitySeeder.Seed(context);
+            CoursesSeeder.Seed(context);
         }
     }
 }
