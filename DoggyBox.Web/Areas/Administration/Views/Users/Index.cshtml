@@ -2,23 +2,22 @@
 @using Kendo.Mvc.UI
 
 @{
-    ViewBag.Title = "Courses";
-    const string ControllerName = "Courses";
+    ViewBag.Title = "Users";
+    const string ControllerName = "Users";
 }
 
 <h2>@ViewBag.Title</h2>
 
 @(Html.Kendo()
-        .Grid<CourseViewModel>()
+            .Grid<UserViewModel>()
     .Name("grid")
     .Columns(cols =>
     {
         cols.Bound(pr => pr.Id);
-        cols.Bound(pr => pr.Name);
-        cols.Bound(pr => pr.Description).Hidden();
-        cols.Bound(pr => pr.Status);
-        cols.Bound(pr => pr.CreatedOn);
-        cols.Bound(pr => pr.ModifiedOn);
+        cols.Bound(pr => pr.FirstName);
+        cols.Bound(pr => pr.LastName);
+        cols.Bound(pr => pr.Email);
+        cols.Bound(pr => pr.Dogs);
         cols.Command(com => com.Edit()).Title("Edit");
         cols.Command(com => com.Destroy()).Title("Delete");
     })

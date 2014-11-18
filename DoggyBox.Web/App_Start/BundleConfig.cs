@@ -49,7 +49,7 @@ namespace DoggyBox.Web
             bundles.Add(new StyleBundle("~/Content/kendo").Include(
                         "~/Content/Kendo/kendo.common.min.css",
                         "~/Content/Kendo/kendo.common-bootstrap.min.css",
-                        "~/Content/Kendo/kendo.moonlight.min"));
+                        "~/Content/Kendo/kendo.black.min.css"));
 
             bundles.Add(new StyleBundle("~/Content/custom").Include(
                         "~/Content/site.css"));
