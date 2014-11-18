@@ -7,6 +7,8 @@
 
     public class PracticeViewModel : IMapFrom<Practice>
     {
+        public int Id { get; set; }
+
         public DateTime Date { get; set; }
 
         public virtual ICollection<TrainerViewModel> Trainers { get; set; }

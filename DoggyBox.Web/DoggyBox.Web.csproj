@@ -195,6 +195,7 @@
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PracticesController.cs" />
     <Compile Include="Controllers\StaticPagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,12 +216,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.readable.css" />
     <Content Include="Content\bootstrap.readable.min.css" />
+    <Content Include="Content\Images\729173903214c.jpg" />
     <Content Include="Content\Images\agility-all.jpg" />
     <Content Include="Content\Images\calendar.gif" />
     <Content Include="Content\Images\contacts_header.jpg" />
     <Content Include="Content\Images\dog-hi5-slide-960x360.jpg" />
     <Content Include="Content\Images\faq_gr_li.gif" />
     <Content Include="Content\Images\faq_gr_li_green.gif" />
+    <Content Include="Content\Images\faq_red_li.gif" />
     <Content Include="Content\Images\guard-doggies.jpg" />
     <Content Include="Content\Images\JackRussellJump_wb.jpg" />
     <Content Include="Content\Images\school.jpg" />
@@ -1115,6 +1118,7 @@
     <Folder Include="Areas\Administration\Views\BaseAdministration\" />
     <Folder Include="Areas\Administration\Views\Courses\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Practices\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

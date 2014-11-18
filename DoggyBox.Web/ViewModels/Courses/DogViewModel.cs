@@ -8,5 +8,7 @@
         public string Name { get; set; }
 
         public string Breed { get; set; }
+
+        public ApplicationUser Owner { get; set; }
     }
 }
