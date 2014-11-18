@@ -14,7 +14,6 @@
         {
         }
 
-        // GET: Courses
         public ActionResult ListAllActive()
         {
             var onpoingCourses = this.Data.Courses.All()

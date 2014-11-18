@@ -99,6 +99,14 @@
             return this.context.SaveChanges();
         }
 
+        public ApplicationDbContext Context
+        {
+            get
+            {
+                return this.context;
+            }
+        }
+
         private IGenericRepository<T> GetRepository<T>() where T : class, IAuditInfo
         {
             var typeOfModel = typeof(T);

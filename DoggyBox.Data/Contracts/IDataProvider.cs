@@ -1,5 +1,6 @@
 ﻿namespace DoggyBox.Data.Contracts
 {
+    using DoggyBox.Data.UnitsOfWork;
     using DoggyBox.Model;
 
     public interface IDataProvider
@@ -21,6 +22,9 @@
         IGenericRepository<CourseInfo> CoursesInfo { get; }
 
         IGenericRepository<Image> Images { get; }
+
+        // TODO: Fix this
+        ApplicationDbContext Context { get; }
 
         int SaveChanges();
     }
